@@ -21,7 +21,7 @@
       <b-button
         id="submit-btn"
         variant="primary"
-        @click='submitAnswer, showDismissibleAlert=true class="m-1"'
+        @click='submitAnswer, showDismissibleAlert=true'
         :disabled="selectedIndex === null || answered"
       >
         Submit

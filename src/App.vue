@@ -3,7 +3,26 @@
     <b-container>
       <b-row>
         <b-col sm="6" offset="3">
-          <b-alert
+          <v-alert
+            border="bottom"
+            color="red"
+            dense
+            dismissible
+            elevation="24"
+            outlined
+            prominent
+            text
+            type="error"
+            v-model="showDismissibleAlert"
+             class="alert-over"
+          >
+            `We are sorry but there are no results that fit those
+            <strong>parameters</strong>. Please change
+            <strong>parameters</strong> and resubmit. We apologize for the
+            inconvience.`
+          </v-alert>
+
+          <!-- <b-alert
             class="alert-over"
             v-model="showDismissibleAlert"
             dismissible
@@ -11,7 +30,7 @@
             `We are sorry but there are no results that fit those parameters.
             Please change parameters and resubmit. We apologize for the
             inconvience.`
-          </b-alert>
+          </b-alert> -->
 
           <Header :numCorrect="numCorrect" :numTotal="numTotal" />
           <ChooseLength
@@ -172,12 +191,10 @@ export default {
   margin-top: 60px;
 }
 .alert-over {
-  font-weight: 600;
-  background-color: indianred;
-  top: 50%;
+
   position: absolute;
   justify-content: center;
   align-items: center;
-  z-index: 11111;
+  z-index: 11111
 }
 </style>
